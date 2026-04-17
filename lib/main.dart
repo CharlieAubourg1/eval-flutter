@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:green_track/l10n/app_localizations.dart';
 import 'package:green_track/pages/results_page/results_page.dart';
+import 'package:green_track/pages/wizard_page/step/wizard_step_transports.dart';
 import 'package:green_track/pages/wizard_page/wizard_page.dart';
 import 'package:green_track/res/app_colors.dart';
 

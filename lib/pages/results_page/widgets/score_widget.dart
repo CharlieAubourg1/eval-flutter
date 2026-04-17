@@ -10,9 +10,9 @@ class ScoreWidget extends StatelessWidget {
   final double value;
 
   ScoreLevel get _level {
-    if (value < 1.0) return ScoreLevel.excellent;
-    if (value < 3.0) return ScoreLevel.bon;
-    if (value < 5.0) return ScoreLevel.mediocre;
+    if (value < 0.5) return ScoreLevel.excellent;
+    if (value < 1.5) return ScoreLevel.bon;
+    if (value < 3.0) return ScoreLevel.mediocre;
     if (value < 8.0) return ScoreLevel.mauvais;
     return ScoreLevel.execrable;
   }

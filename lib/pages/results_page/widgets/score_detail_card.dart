@@ -5,7 +5,7 @@ import 'package:green_track/res/app_colors.dart';
 class ScoreDetailCard extends StatelessWidget {
   const ScoreDetailCard({required this.details});
 
-  final List<({String label, IconData icon, double value, double max})> details;
+  final List<ScoreDetail> details;
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +29,13 @@ class ScoreDetailCard extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          ...details.map(
-            (d) => _ScoreDetailRow(
+          for (final d in details)
+            _ScoreDetailRow(
               icon: d.icon,
               label: d.label,
               value: d.value,
               max: d.max,
             ),
-          ),
         ],
       ),
     );
@@ -93,11 +92,24 @@ class _ScoreDetailRow extends StatelessWidget {
               value: value / max,
               minHeight: 6,
               backgroundColor: AppColors.primary.withOpacity(0.15),
-              valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
             ),
           ),
         ],
       ),
     );
   }
+}
+
+class ScoreDetail {
+  const ScoreDetail({
+    required this.label,
+    required this.icon,
+    required this.value,
+    required this.max,
+  });
+
+  final String label;
+  final IconData icon;
+  final double value;
+  final double max;
 }

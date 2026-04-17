@@ -34,7 +34,7 @@ class ResultsPage extends StatelessWidget {
               child: SizedBox(
                 width: 180,
                 height: 180,
-                child: ScoreWidget(value: 10.4),
+                child: ScoreWidget(value: 10.0),
               ),
             ),
 
@@ -42,21 +42,21 @@ class ResultsPage extends StatelessWidget {
 
             ScoreDetailCard(
               details: [
-                (
+                ScoreDetail(
                   label: localizations.score_details_label_transports,
-                  icon: AppIcons.car,
+                  icon: Icons.directions_car,
                   value: 0.1,
                   max: 1.0,
                 ),
-                (
+                ScoreDetail(
                   label: localizations.score_details_label_housing,
-                  icon: AppIcons.house,
+                  icon: Icons.home,
                   value: 0.1,
                   max: 1.0,
                 ),
-                (
+                ScoreDetail(
                   label: localizations.score_details_label_consumption,
-                  icon: AppIcons.shoppingCart,
+                  icon: Icons.shopping_basket,
                   value: 0.2,
                   max: 1.0,
                 ),
